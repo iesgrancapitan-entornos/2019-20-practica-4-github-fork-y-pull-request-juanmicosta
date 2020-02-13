@@ -1,0 +1,172 @@
+*{
+
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+h1 {
+    text-align: center; 
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.logo img{
+    width: 18em;
+    height: 4em;
+}
+nav{
+    background: #b2bec3;
+}
+.navbar{
+    
+    display: flex;
+    margin-left: 8em;
+       
+}
+
+.navbar div{
+    padding: 12px;
+}
+
+.navbar div a{
+    color: #141C26;
+    text-decoration: none;
+}
+
+
+.navbar > div a:hover{
+    color: #E47E19;
+}
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+  
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    background: #b2bec3;
+    z-index: 1;
+}
+  
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 14px;
+    text-decoration: none;
+    display: block;
+}  
+.dropdown-content a:hover{
+    color: #E47E19;
+}
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/*CSS Slider*/
+.slider{
+    width: 100%;
+    height: 32.8em;
+    margin: 0;
+    overflow: hidden;
+}
+
+.slider ul{
+    display: flex;
+    padding: 0;
+    width: 400%;
+
+    animation: cambio 16s infinite;
+}
+
+.slider ul li{
+    width: 100%;
+    list-style: none;
+}
+
+.slider img{
+    width: 100%;
+    height: 70%;
+}
+/*Transición Slider*/
+@keyframes cambio{
+    0% {margin-left: 0;}
+    20% {margin-left: 0;}
+    
+    25% {margin-left: -100%;}
+    45% {margin-left: -100%;}
+
+    50% {margin-left: -200%;}
+    70% {margin-left: -200%;}
+
+    75% {margin-left: -300%;}
+    100%{margin-left: -300%;}
+}
+
+/* Cajas de categorías */
+.cajasdecategorias {
+    background-image: url(../img/imagencajas.jpg);
+    background-position: center;
+    background-size: 600px;
+    border: solid 1px black;
+    border-radius: 2px;
+    width: 300px;
+    height: 300px;
+    margin: auto;
+}
+.cajasdecategorias h1{
+    color: black;
+}
+.wrapper {
+    overflow-x: hidden; /*Elimina la barra de movimiento inferior*/
+    
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2px;
+    grid-auto-rows: minmax(100px, auto);
+
+    padding: 30px;
+}
+.wrapper a{
+    text-decoration: none;
+}
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.4rem 0;
+
+    color: whitesmoke;
+    background-color: rgb(33, 33, 33);
+    
+    margin: 0px;
+    width: 100%;
+
+    bottom: 0;
+}
+footer img {
+    padding: 10px;
+    width: 14em;
+    height: 3em;
+}
+.footerimg img {
+    width: 25px;
+    height: 25px;
+}
+
+@media (max-width:920px) {
+    .wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
